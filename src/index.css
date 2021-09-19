@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.nasaListItems{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items: flex-start;
+  row-gap:10px ;
+}
+.NasaItem ,.nasaImage,.nasaVideo{
+  width: 40vw;
+}
+.nasaImage ,.nasaVideo{
+  max-height: 70vh;
+}
+.NasaItem{
+  padding:3px;
+  border-radius: 5%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.NasaItem h2{
+  color:blue;
+  text-align: center
+}
+.NasaItem button{
+  width: 5vw;
+  height: 5vh;
+  color:blue;
+  margin-left: 2vw;
+}
+.nasaImage{
+  border-radius: 20%;
+
+}
+.reactLoading{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%)
+}
