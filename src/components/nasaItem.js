@@ -1,15 +1,26 @@
 import React,{useState} from 'react'
-
 export default function NasaItem(props) {
     const style={
         color:"red",
         fontSize:"bold"
     }
-    const [buttonData,setButtonData]=useState({value:false})
-    const onSubmit=(value)=>{
-        setButtonData({value:value})
-    }
-    console.log(buttonData)
+    const [buttonData,setButtonData]=useState({
+        btnText: 'Like',
+        className: 'heartOpen'
+      });
+    let btnClick=()=> {
+        if(buttonData.btnText === 'Like') {
+            setButtonData({
+            btnText: 'Unlike',
+            className: 'heartFull'
+          })
+        } else {
+            setButtonData({
+            btnText: 'Like',
+            className: 'heartOpen'
+          })
+        }
+      }
     return (
         <div className={"NasaItem"}>
             <h2>{props.title}</h2>
@@ -19,7 +30,10 @@ export default function NasaItem(props) {
                 <li ><span style={style}>explanation: </span>{props.explanation}</li>
                 {props.copyright?<li ><span style={style}>copyright: </span>{props.copyright}</li>:""}
             </ul>
-            <button onSubmit={()=>onSubmit(!buttonData.value)}>{buttonData.value===false?"like":"dislike"}</button>
+            <div>
+            <span onClick={()=>btnClick()} className={buttonData.className}>
+        { buttonData.btnText }
+      </span></div>
         </div>
     )
 }

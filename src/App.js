@@ -1,15 +1,10 @@
 import './App.css';
-import {BrowserRouter,Route} from "react-router-dom"
-import Home from "./components/home.js"
+import NasaListItems from './components/nasaListItems';
 
-function App() {
+const App=()=> {
   return (
-  <BrowserRouter>
-  <div>
-    <Route component={Home} path="/" exact/>
-  </div>
-  </BrowserRouter>
-  );
+  <NasaListItems/>
+  )
 }
 
 export default App;

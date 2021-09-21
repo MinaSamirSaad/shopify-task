@@ -40,7 +40,7 @@ code {
   width: 5vw;
   height: 5vh;
   color:blue;
-  margin-left: 2vw;
+  
 }
 .nasaImage{
   border-radius: 20%;
@@ -52,3 +52,14 @@ code {
   top: 50%;
   transform: translate(-50%,-50%)
 }
+.NasaItem div span{
+  margin: 2vw;
+  background-image:url(heart.png);
+  background-repeat:no-repeat;
+  display:block;
+  width:24px;
+  height:20px;
+  cursor:pointer;
+  text-indent:-9999px}
+  .heartOpen{background-position:0 0}
+  .heartFull{background-position:0 -20px}
